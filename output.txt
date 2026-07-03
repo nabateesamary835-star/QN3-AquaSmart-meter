@@ -1,0 +1,44 @@
+==========================================
+  SmartMeter — Assertion-Based Tests
+==========================================
+
+Test: loadToken re-opens a closed valve
+  PASSED
+
+Test: consumption beyond credit closes the valve
+  PASSED
+
+==========================================
+  Results: 2 passed, 0 failed
+==========================================
+
+=== Immy's AquaSmart Demo ===
+
+Meter ID       : IMMY-MTR-007
+Opening Credit : UGX 8000.0
+Valve Status   : OPEN
+--------------------------------------------------
+
+** Loading token of UGX 3,000 ...
+   Balance after load : UGX 11000.0
+
+** Dispensing 40 litres (cost UGX 2,000) ...
+   Dispensed          : true
+   Remaining credit   : UGX 9000.0
+
+** Dispensing 200 litres (cost UGX 10,000) ...
+   Dispensed          : false
+   Remaining credit   : UGX 0.0
+   Valve status       : CLOSED
+
+** Reloading token of UGX 12,000 ...
+   Balance after load : UGX 12000.0
+   Valve status       : OPEN
+
+** Dispensing 80 litres (cost UGX 4,000) ...
+   Dispensed          : true
+   Final credit       : UGX 8000.0
+
+--------------------------------------------------
+  Demo complete.
+--------------------------------------------------
